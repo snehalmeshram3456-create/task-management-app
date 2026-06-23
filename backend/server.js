@@ -17,12 +17,13 @@ connectDB();
 
 // Middleware
 
+
 app.use(cors({
   origin: [
-    "http://127.0.0.1:5500",
-    "http://localhost:5500",
-    "http://localhost:3000"
+    "https://taskmangaemeent.netlify.app",
+    "http://127.0.0.1:5500"
   ],
+  methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
 app.use(express.json({ limit: '10mb' }));
