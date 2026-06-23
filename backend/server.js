@@ -42,7 +42,9 @@ app.get('/api/health', (req, res) => {
 });
 
 // Serve index.html for all routes (SPA)
-
+app.get("/", (req, res) => {
+  res.send("Backend Running");
+});
 
 // Error handling middleware
 app.use((err, req, res, next) => {
@@ -64,3 +66,4 @@ app.listen(PORT, () => {
 });
 
 module.exports = app;
+
