@@ -161,7 +161,7 @@ async function handleLogout() {
             // Show toast and redirect
             showToast('Logged out successfully', 'success');
             setTimeout(() => {
-                window.location.href = '/login.html';
+                window.location.href = './login.html';
             }, 1000);
         } catch (error) {
             console.error('Logout error:', error);
