@@ -44,7 +44,7 @@ async function apiCall(endpoint, method = 'GET', data = null, hasAuth = true) {
             options.body = JSON.stringify(data);
         }
         
-        const response = await fetch(`${API_BASE_URL}${endpoint}`, options);
+        const response = await fetch(`${API_URL}${endpoint}`, options);
         const result = await response.json();
         
         if (!response.ok) {
